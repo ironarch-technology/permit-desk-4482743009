@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Application - Mountport Permit Desk</title>
+  <link rel="stylesheet" href="/css/site.css">
+</head>
+<body>
+  <main id="main">
+    <p><a href="/applications.html">Back to my applications</a></p>
+    <h1 id="heading" tabindex="-1">Application</h1>
+    <p id="live" role="status"></p>
+    <div id="notice"></div>
+    <div id="content"></div>
+  </main>
+
+  <dialog id="withdraw-dialog" aria-labelledby="withdraw-title">
+    <form method="dialog" id="withdraw-form">
+      <h2 id="withdraw-title">Withdraw this application?</h2>
+      <p>Withdrawing ends the application. It cannot be reopened, and you would need to apply again.</p>
+      <div class="field">
+        <label for="withdraw-reason">Reason (optional)</label>
+        <textarea id="withdraw-reason"></textarea>
+      </div>
+      <div class="actions">
+        <button type="submit" value="confirm" class="btn btn-danger">Withdraw application</button>
+        <button type="submit" value="cancel" class="btn">Keep application</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="/js/api.js"></script>
+  <script src="/js/application.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "NR-0140-22": { "zoning": "R1" },
+  "NR-0310-07": { "zoning": "R1" },
+  "NR-0260-15": { "zoning": "R1" },
+  "EB-1120-03": { "zoning": "R2" },
+  "EB-0830-11": { "zoning": "R2" },
+  "OH-2080-01": { "zoning": "C2" },
+  "OH-0090-04": { "zoning": "C1" },
+  "OH-4500-02": { "zoning": "C2" },
+  "MW-0770-09": { "zoning": "M1" },
+  "MW-3010-05": { "zoning": "M1" },
+  "MW-0180-13": { "zoning": "M1", "conflict": "Parcel records conflict: MW-0180-13 carries both M1 and a pending C1 overlay" },
+  "EB-0050-00": { "zoning": "OS" }
+}

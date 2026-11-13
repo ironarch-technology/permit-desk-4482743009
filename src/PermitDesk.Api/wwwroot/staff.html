@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Counter search - Mountport Permit Desk</title>
+  <link rel="stylesheet" href="/css/site.css">
+</head>
+<body>
+  <main id="main" style="max-width: 80rem">
+    <h1>Counter search</h1>
+    <form id="search-form" class="card">
+      <div class="field-row">
+        <div class="field"><label for="parcel">Property address</label><input type="text" id="parcel"></div>
+        <div class="field"><label for="applicant">Applicant name</label><input type="text" id="applicant"></div>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label for="state">Status</label>
+          <select id="state">
+            <option value="">Any</option>
+            <option value="submitted">Submitted</option>
+            <option value="zoning_check">Zoning check</option>
+            <option value="zoning_hold">Zoning hold</option>
+            <option value="plan_review">Plan review</option>
+            <option value="corrections_required">Corrections required</option>
+            <option value="fees_assessed">Fees due</option>
+            <option value="issued">Permit issued</option>
+            <option value="denied">Denied</option>
+            <option value="withdrawn">Withdrawn</option>
+            <option value="expired">Expired</option>
+          </select>
+        </div>
+        <div class="field-row">
+          <div class="field"><label for="from">Submitted from</label><input type="date" id="from"></div>
+          <div class="field"><label for="to">Submitted to</label><input type="date" id="to"></div>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+
+    <p id="result-count" role="status"></p>
+    <div class="card">
+      <table class="list">
+        <thead>
+          <tr>
+            <th scope="col">Reference</th>
+            <th scope="col">Status</th>
+            <th scope="col">Property</th>
+            <th scope="col">Applicant</th>
+            <th scope="col">Scope of work</th>
+            <th scope="col">Value</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody id="results"></tbody>
+      </table>
+    </div>
+  </main>
+  <script src="/js/api.js"></script>
+  <script src="/js/staff.js"></script>
+</body>
+</html>

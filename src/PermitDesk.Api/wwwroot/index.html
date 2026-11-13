@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign in - Mountport Permit Desk</title>
+  <link rel="stylesheet" href="/css/site.css">
+</head>
+<body>
+  <main id="main" class="login">
+    <div class="card">
+      <h1>Mountport Permit Desk</h1>
+      <p class="hint">Apply for a building permit and follow its progress.</p>
+      <div id="message"></div>
+      <form id="login-form" novalidate>
+        <input type="email" id="email" placeholder="Email address" autocomplete="username">
+        <input type="password" id="password" placeholder="Password" autocomplete="current-password">
+        <button type="submit" class="btn btn-primary">Sign in</button>
+      </form>
+    </div>
+  </main>
+  <script src="/js/api.js"></script>
+  <script src="/js/login.js"></script>
+</body>
+</html>

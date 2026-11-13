@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My applications - Mountport Permit Desk</title>
+  <link rel="stylesheet" href="/css/site.css">
+</head>
+<body>
+  <main id="main">
+    <h1>My applications</h1>
+    <div class="toolbar">
+      <input type="search" id="filter-text" placeholder="Filter by address or reference">
+      <select id="filter-state">
+        <option value="">All statuses</option>
+      </select>
+      <a class="btn btn-primary" href="/apply.html">Apply for a permit</a>
+    </div>
+    <div class="card">
+      <table class="list">
+        <thead>
+          <tr>
+            <th scope="col">Reference</th>
+            <th scope="col">Property</th>
+            <th scope="col">Work</th>
+            <th scope="col">Status</th>
+            <th scope="col">Updated</th>
+            <th scope="col"><span class="muted">Actions</span></th>
+          </tr>
+        </thead>
+        <tbody id="rows"></tbody>
+      </table>
+      <p id="empty" class="hint" hidden>No applications match.</p>
+    </div>
+  </main>
+  <script src="/js/api.js"></script>
+  <script src="/js/applications.js"></script>
+</body>
+</html>

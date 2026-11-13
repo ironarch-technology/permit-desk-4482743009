@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Apply for a permit - Mountport Permit Desk</title>
+  <link rel="stylesheet" href="/css/site.css">
+</head>
+<body>
+  <main id="main">
+    <h1>Apply for a building permit</h1>
+    <div id="form-errors"></div>
+    <form id="apply-form" class="card" novalidate>
+      <fieldset>
+        <legend>The property</legend>
+        <div class="field">
+          <input type="text" id="parcelAddress" placeholder="Property address, for example 14 Larkspur Lane" autocomplete="off">
+          <ul id="suggestions" class="suggestions" hidden></ul>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>The work</legend>
+        <div class="field-row">
+          <div class="field">
+            <select id="workType">
+              <option value="">Type of work</option>
+            </select>
+          </div>
+          <div class="field">
+            <input type="number" id="declaredValuation" placeholder="Estimated value of the work ($)" min="0" step="1">
+            <div id="valuation-hint" class="hint"></div>
+          </div>
+        </div>
+        <div class="field">
+          <textarea id="scopeOfWork" placeholder="Describe the work you plan to do"></textarea>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>About you</legend>
+        <div class="field">
+          <select id="applicantType">
+            <option value="resident">I own or live at the property</option>
+            <option value="contractor">I am a licensed contractor</option>
+          </select>
+        </div>
+        <div class="field-row">
+          <div class="field"><input type="text" id="contactName" placeholder="Full name" autocomplete="name"></div>
+          <div class="field"><input type="email" id="contactEmail" placeholder="Email address" autocomplete="email"></div>
+        </div>
+        <div class="field-row">
+          <div class="field"><input type="tel" id="contactPhone" placeholder="Phone number" autocomplete="tel"></div>
+          <div class="field"></div>
+        </div>
+        <div id="contractor-fields" class="field-row" hidden>
+          <div class="field"><input type="text" id="contractorLicenceNumber" placeholder="Licence number (MPL-123456)"></div>
+          <div class="field"><input type="date" id="contractorLicenceExpiry" title="Licence expiry date"></div>
+        </div>
+      </fieldset>
+
+      <div class="actions">
+        <button type="submit" class="btn btn-primary" id="submit-button">Submit application</button>
+        <button type="button" class="btn" id="save-button">Save draft</button>
+        <a class="btn" href="/applications.html">Cancel</a>
+      </div>
+      <p id="save-status" class="hint" role="status"></p>
+    </form>
+  </main>
+  <script src="/js/api.js"></script>
+  <script src="/js/apply.js"></script>
+</body>
+</html>
